@@ -9,12 +9,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bookings', function (Blueprint $table) {
-            $table->id(); // Kolom id, auto-increment
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relasi ke users
-            $table->foreignId('ruangan_id')->constrained()->onDelete('cascade'); // Relasi ke ruangans
-            $table->dateTime('start_time'); // Waktu mulai booking
-            $table->dateTime('end_time'); // Waktu selesai booking
-            $table->timestamps(); // created_at dan updated_at
+            $table->id(); 
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('ruangan_id')->constrained()->onDelete('cascade');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
+            $table->timestamps();
         });
     }
 
